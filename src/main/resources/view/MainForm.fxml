@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane fx:id="root" prefHeight="810.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep10.app.controller.MainFormController">
+   <children>
+      <Canvas fx:id="cnv" height="810.0" layoutX="125.0" layoutY="125.0" onKeyPressed="#cnvOnKeyPressed" onMouseClicked="#cnvOnMouseClicked" onMouseDragged="#cnvOnMouseDragged" onMousePressed="#cnvOnMousePressed" onMouseReleased="#cnvOnMouseReleased" width="880.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox fx:id="vBox" layoutX="8.0" layoutY="23.0" onMouseDragged="#vBoxOnMouseDragged" onMousePressed="#vBoxOnMousePressed" prefHeight="769.0" prefWidth="120.0" spacing="5.0" style="-fx-border-color: grey; -fx-background-color: lightyellow;">
+         <children>
+            <Label fx:id="lblRectangle" alignment="CENTER" onMouseClicked="#lblRectangleOnMouseClicked" prefHeight="100.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fx:id="imgRectangle" fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/rectangle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Rectangle" />
+               </tooltip>
+            </Label>
+            <Label fx:id="lblRoundRectangle" alignment="CENTER" layoutX="11.0" layoutY="11.0" onMouseClicked="#lblRoundRectangleOnMouseClicked" prefHeight="100.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fx:id="imgRoundRectangle" fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/rounded-rectangle.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Round Rectangle" />
+               </tooltip>
+            </Label>
+            <Label fx:id="lblOval" alignment="CENTER" layoutX="11.0" layoutY="111.0" onMouseClicked="#lblOvalOnMouseClicked" prefHeight="100.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fx:id="imgOval" fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/ellipse.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Oval" />
+               </tooltip>
+            </Label>
+            <Label fx:id="lblPencil" alignment="CENTER" layoutX="11.0" layoutY="211.0" onMouseClicked="#lblPencilOnMouseClicked" prefHeight="100.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fx:id="imgPencil" fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/pencil.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Pencil" />
+               </tooltip>
+            </Label>
+            <Label fx:id="lblEraser" alignment="CENTER" layoutX="11.0" layoutY="311.0" onMouseClicked="#lblEraserOnMouseClicked" prefHeight="100.0" prefWidth="145.0">
+               <graphic>
+                  <ImageView fx:id="imgEraser" fitHeight="80.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/eraser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Eraser" />
+               </tooltip>
+            </Label>
+            <Label prefHeight="37.0" prefWidth="145.0" text="Stroke">
+               <graphic>
+                  <ColorPicker fx:id="clrStroke" onAction="#clrStrokeOnAction" prefHeight="43.0" prefWidth="64.0">
+                     <value>
+                        <Color red="0.05263157933950424" green="0.0026803119108080864" blue="0.0026803119108080864" />
+                     </value>
+                     <tooltip>
+                        <Tooltip text="Stroke Color" />
+                     </tooltip>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </ColorPicker>
+               </graphic>
+            </Label>
+            <Label layoutX="11.0" layoutY="664.0" prefHeight="47.0" prefWidth="118.0" text="Fill">
+               <graphic>
+                  <ColorPicker fx:id="clrFill" onAction="#clrFillOnAction" prefHeight="42.0" prefWidth="63.0">
+                     <value>
+                        <Color red="0.9342105388641357" green="0.02162524312734604" blue="0.02162524312734604" />
+                     </value>
+                     <tooltip>
+                        <Tooltip text="Fill Color" />
+                     </tooltip>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </ColorPicker>
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
